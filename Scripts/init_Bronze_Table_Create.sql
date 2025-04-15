@@ -14,8 +14,12 @@ Warning:
 
 -- Creating the tables for Bronze Layer
 
--- Table 1 
-CREATE TABLE bronze.crm_customer_info(
+--Check if tables exists before creating them. 
+
+-- Table 1
+IF OBJECT_ID('bronze.crm_cust_info') IS NOT NULL
+	DROP TABLE bronze.crm_cust_info;
+CREATE TABLE bronze.crm_cust_info(
 	cst_id INT,
 	cst_key NVARCHAR(30),
 	cst_firstname NVARCHAR(30),
@@ -25,7 +29,9 @@ CREATE TABLE bronze.crm_customer_info(
 	cst_create_date DATE
 );
 
--- Table  2
+-- Table 2
+IF OBJECT_ID('bronze.crm_prd_info') IS NOT NULL
+	DROP TABLE bronze.crm_prd_info;
 CREATE TABLE bronze.crm_prd_info(
 	prd_id INT,
 	prd_key NVARCHAR(30),
@@ -37,6 +43,8 @@ CREATE TABLE bronze.crm_prd_info(
 );
 
 -- Table 3
+IF OBJECT_ID('bronze.crm_sales_details') IS NOT NULL
+	DROP TABLE bronze.crm_sales_details;
 CREATE TABLE bronze.crm_sales_details(
 	sls_ord_num NVARCHAR(30),
 	sls_prd_key NVARCHAR(30),
@@ -50,6 +58,8 @@ CREATE TABLE bronze.crm_sales_details(
 );
 
 -- Table 4
+IF OBJECT_ID('bronze.erp_cust_az12') IS NOT NULL
+	DROP TABLE bronze.erp_cust_az12;
 CREATE TABLE bronze.erp_cust_az12(
 	cid NVARCHAR(30),
 	bdate DATE,
@@ -57,16 +67,21 @@ CREATE TABLE bronze.erp_cust_az12(
 );
 
 -- Table 5
+IF OBJECT_ID('bronze.erp_loc_a101') IS NOT NULL
+	DROP TABLE bronze.erp_loc_a101;
 CREATE TABLE bronze.erp_loc_a101(
 	cid NVARCHAR(30),
 	cntry NVARCHAR(30)
 );
  
 -- Table 6
+IF OBJECT_ID('bronze.erp_px_cat_g1v2') IS NOT NULL
+	DROP TABLE bronze.erp_px_cat_g1v2;
 CREATE TABLE bronze.erp_px_cat_g1v2(
 	id NVARCHAR(30),
 	cat NVARCHAR(30),
 	subcat NVARCHAR(30),
 	maintenance NVARCHAR(30)
 );
+
 
