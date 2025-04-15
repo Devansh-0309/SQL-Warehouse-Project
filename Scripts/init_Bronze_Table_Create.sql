@@ -26,14 +26,14 @@ CREATE TABLE bronze.crm_customer_info(
 );
 
 -- Table  2
-CREATE TABLE bronze.crm_product_info(
+CREATE TABLE bronze.crm_prd_info(
 	prd_id INT,
 	prd_key NVARCHAR(30),
 	prd_nm NVARCHAR(30),
 	prd_cost INT,
 	prd_line NVARCHAR(30),
-	prd_start_dt DATE,
-	prd_end_dt DATE
+	prd_start_dt DATETIME,
+	prd_end_dt DATETIME
 );
 
 -- Table 3
@@ -41,33 +41,32 @@ CREATE TABLE bronze.crm_sales_details(
 	sls_ord_num NVARCHAR(30),
 	sls_prd_key NVARCHAR(30),
 	sls_cust_id INT,
-	sls_order_dt DATE,
-	sls_ship_dt DATE,
-	sls_due_dt DATE,
+	sls_order_dt INT,
+	sls_ship_dt INT,
+	sls_due_dt INT,
 	sls_sales INT,
 	sls_quant INT,
 	sls_price INT
 );
 
 -- Table 4
-CREATE TABLE bronze.erp_customer_info(
-	CID NVARCHAR(30),
-	BDATE DATE,
-	GEN NVARCHAR(30)
+CREATE TABLE bronze.erp_cust_az12(
+	cid NVARCHAR(30),
+	bdate DATE,
+	gen NVARCHAR(30)
 );
 
 -- Table 5
-CREATE TABLE bronze.erp_customer_loc(
-	CID NVARCHAR(30),
-	CNTRY NVARCHAR(30)
+CREATE TABLE bronze.erp_loc_a101(
+	cid NVARCHAR(30),
+	cntry NVARCHAR(30)
 );
-
+ 
 -- Table 6
-CREATE TABLE bronze.erp_customer_cat(
-	ID NVARCHAR(30),
-	CAT NVARCHAR(30),
-	SUBCAT NVARCHAR(30),
-	MAINTENANCE NVARCHAR(30)
+CREATE TABLE bronze.erp_px_cat_g1v2(
+	id NVARCHAR(30),
+	cat NVARCHAR(30),
+	subcat NVARCHAR(30),
+	maintenance NVARCHAR(30)
 );
-
 
