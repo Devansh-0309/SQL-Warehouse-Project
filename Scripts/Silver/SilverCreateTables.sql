@@ -34,12 +34,13 @@ IF OBJECT_ID('Silver.crm_prd_info') IS NOT NULL
 	DROP TABLE Silver.crm_prd_info;
 CREATE TABLE Silver.crm_prd_info(
 	prd_id INT,
+	cat_id NVARCHAR(30),
 	prd_key NVARCHAR(30),
-	prd_nm NVARCHAR(30),
+	prd_nm NVARCHAR(40),
 	prd_cost INT,
 	prd_line NVARCHAR(30),
-	prd_start_dt DATETIME,
-	prd_end_dt DATETIME,
+	prd_start_dt DATE,
+	prd_end_dt DATE,
 	dwh_load_date DATETIME2 DEFAULT GETDATE()
 );
 
