@@ -10,6 +10,11 @@ NOTE: This table had no dirty data that needed to be cleaned. Therefore it can b
 
 	Then this script inserts the cleaned data to the table in the silver layer
 */
+
+PRINT 'Truncating Table: Silver.erp_px_cat_g1v2'
+TRUNCATE TABLE Silver.erp_px_cat_g1v2
+
+PRINT 'Inserting Into Table: Silver.erp_px_cat_g1v2'
 -- Inserting data into silver layer table
 INSERT INTO Silver.erp_px_cat_g1v2(
 id,
