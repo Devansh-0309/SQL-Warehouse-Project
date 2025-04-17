@@ -12,8 +12,10 @@ Purpose of the Script
 
 	Then this script inserts the cleaned data to the table in the silver layer
 */
+PRINT 'Truncating Table: Silver.erp_cust_az12'
+TRUNCATE TABLE Silver.erp_cust_az12
 
--- Inserting Data into the silver layer table
+PRINT 'Inserting Into Table: Silver.erp_cust_az12'
 INSERT INTO Silver.erp_cust_az12(cid, bdate, gen)
 
 SELECT
