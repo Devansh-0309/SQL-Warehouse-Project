@@ -13,7 +13,10 @@ Purpose of the Script
 
 	Then this script inserts the cleaned data to the table in the silver layer
 */
+PRINT 'Truncating Table: Silver.crm_prd_info'
+TRUNCATE TABLE Silver.crm_prd_info
 
+PRINT 'Inserting Into Table: Silver.crm_prd_info'
 -- Inserting the Data into Silver Layer table
 INSERT INTO Silver.crm_prd_info(
 	prd_id,
