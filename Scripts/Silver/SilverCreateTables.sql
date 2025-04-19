@@ -16,7 +16,7 @@ Warning:
 --Check if tables exists before creating them. 
 
 -- Table 1
-IF OBJECT_ID('Silver.crm_cust_info') IS NOT NULL
+IF OBJECT_ID('Silver.crm_cust_info', 'U') IS NOT NULL
 	DROP TABLE Silver.crm_cust_info;
 CREATE TABLE Silver.crm_cust_info(
 	cst_id INT,
@@ -30,7 +30,7 @@ CREATE TABLE Silver.crm_cust_info(
 );
 
 -- Table 2
-IF OBJECT_ID('Silver.crm_prd_info') IS NOT NULL
+IF OBJECT_ID('Silver.crm_prd_info', 'U') IS NOT NULL
 	DROP TABLE Silver.crm_prd_info;
 CREATE TABLE Silver.crm_prd_info(
 	prd_id INT,
@@ -45,15 +45,15 @@ CREATE TABLE Silver.crm_prd_info(
 );
 
 -- Table 3
-IF OBJECT_ID('Silver.crm_sales_details') IS NOT NULL
+IF OBJECT_ID('Silver.crm_sales_details', 'U') IS NOT NULL
 	DROP TABLE Silver.crm_sales_details;
 CREATE TABLE Silver.crm_sales_details(
 	sls_ord_num NVARCHAR(30),
 	sls_prd_key NVARCHAR(30),
 	sls_cust_id INT,
-	sls_order_dt INT,
-	sls_ship_dt INT,
-	sls_due_dt INT,
+	sls_order_dt DATE,
+	sls_ship_dt DATE,
+	sls_due_dt DATE,
 	sls_sales INT,
 	sls_quant INT,
 	sls_price INT,
@@ -61,7 +61,7 @@ CREATE TABLE Silver.crm_sales_details(
 );
 
 -- Table 4
-IF OBJECT_ID('Silver.erp_cust_az12') IS NOT NULL
+IF OBJECT_ID('Silver.erp_cust_az12', 'U') IS NOT NULL
 	DROP TABLE Silver.erp_cust_az12;
 CREATE TABLE Silver.erp_cust_az12(
 	cid NVARCHAR(30),
@@ -71,7 +71,7 @@ CREATE TABLE Silver.erp_cust_az12(
 );
 
 -- Table 5
-IF OBJECT_ID('Silver.erp_loc_a101') IS NOT NULL
+IF OBJECT_ID('Silver.erp_loc_a101', 'U') IS NOT NULL
 	DROP TABLE Silver.erp_loc_a101;
 CREATE TABLE Silver.erp_loc_a101(
 	cid NVARCHAR(30),
@@ -80,7 +80,7 @@ CREATE TABLE Silver.erp_loc_a101(
 );
  
 -- Table 6
-IF OBJECT_ID('Silver.erp_px_cat_g1v2') IS NOT NULL
+IF OBJECT_ID('Silver.erp_px_cat_g1v2', 'U') IS NOT NULL
 	DROP TABLE Silver.erp_px_cat_g1v2;
 CREATE TABLE Silver.erp_px_cat_g1v2(
 	id NVARCHAR(30),
