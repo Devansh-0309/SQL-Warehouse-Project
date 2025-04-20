@@ -51,8 +51,8 @@ END AS sls_due_dt,
 
 -- Case statements to clean the numerical columns
 CASE
-	WHEN sls_sales IS NULL OR sls_sales <= 0 OR sls_sales != sls_quant * ABS(sls_price)
-		THEN sls_quant * ABS(sls_price)
+	WHEN sls_sales IS NULL OR sls_sales <= 0 OR sls_sales != sls_quant * ABS(sls_price) THEN sls_quant * ABS(sls_price)
+	ELSE sls_sales
 END AS sls_sales,
 sls_quant,
 CASE 
@@ -60,3 +60,4 @@ CASE
 	ELSE sls_price
 END AS sls_price
 FROM Bronze.crm_sales_details
+SELECT * FROM Bronze.crm_sales_details;
