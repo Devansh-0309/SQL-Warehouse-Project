@@ -8,6 +8,9 @@ Welcome to the **Data Warehouse & Analytics Project** repository
 ### Objective
 Develop a modern data warehouse using SQL to consolidate sales, enabling analytical reporting and decision making.
 
+### Data Architecture 
+![image](https://github.com/user-attachments/assets/245bd99f-b19e-4d2c-b72e-e8be38c3dae3)
+
 
 #### Specifications
 **Data Scources:** import the data from two sources (erp, crm) present as csv files.
