@@ -16,3 +16,13 @@ This layer is the final layer that consist of the processed tables and data that
 | customer_id | INT   | Contains customer_id e.g (11000, 11001 ,....)   |
 | customer_number | NVARCAHR(30)     | Contains customer number e.g (AW00011000) |
 | first_name | NVARCHAR(30)| Contains the first name of the customer e.g (jon)|
+| last_name | NVARCHAR(30)| Contains the last name of the customer e.g (yang)|
+| country | NVARCHAR(30)| Contains the country origin of the customer e.g (Australia, France etc.)|
+| marital_status | NVARCHAR(30)| Contains the marital status e.g (Married, Single, n/a)|
+| gender | NVARCHAR(30)| Contains the gender of the customer e.g (Male, Female, n/a)|
+| birth_date | DATE| Contains the birth date of the customer in 'YYYY-MM-DD' format |
+| create_date | DATE | Contains the creation date of the customer when the id is created in 'YYYY-MM-DD' format|
+
+
+
+
