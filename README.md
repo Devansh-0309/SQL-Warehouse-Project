@@ -79,9 +79,7 @@ This layer is the final layer that consist of the processed tables and data that
 **Scope:** Focus on the latest data and no need of historization.
 **Documentation:** Prepare clear of data model to support both the buisness and analytic team.
 
-
 ### Analytics & Reporting
-
 
 #### Objective
 Develop SQL-based analytics to deliver detailed insights into:
